@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "TorstenBergmann 6/11/2017 17:10",
+	"super" : "BaselineOf",
+	"category" : "BaselineOfCommunity",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BaselineOfCommunity",
+	"type" : "normal"
+}
