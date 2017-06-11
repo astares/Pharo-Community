@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "TorstenBergmann 4/7/2017 01:13",
+	"super" : "Object",
+	"category" : "Pharo-Community-Utilities",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"IconCache"
+	],
+	"instvars" : [ ],
+	"name" : "PHCIconProvider",
+	"type" : "normal"
+}
