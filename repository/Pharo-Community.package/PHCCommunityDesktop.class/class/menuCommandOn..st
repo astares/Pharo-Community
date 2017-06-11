@@ -5,6 +5,14 @@ menuCommandOn: aBuilder
 			order: 4; 			 
 			label: 'Community';
 			icon: PHCIconProvider pharoIcon.
+			
+	(aBuilder item: #'Pharo Homepage')
+			order: 0.002; 
+			parent: #'Community';
+			label: 'Pharo Homepage';
+			icon: PHCIconProvider pharoIcon;
+			action: [ WebBrowser openOn: 'http://www.pharo.org' ].
+	aBuilder withSeparatorAfter.		
 	
 	(aBuilder item: #'Discord')
 			order: 0.002; 
@@ -12,7 +20,7 @@ menuCommandOn: aBuilder
 			label: 'Discord';
 			icon: PHCIconProvider discordIcon;
 			action: [ WebBrowser openOn: 'https://discordapp.com/channels/@me' ].
-	aBuilder withSeparatorAfter.
+ 
 	
 	(aBuilder item: #'Mailinglists')
 			order: 0.002; 
