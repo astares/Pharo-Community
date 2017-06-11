@@ -2,48 +2,25 @@ world menu
 menuCommandOn: aBuilder
 	<worldMenu>
 	(aBuilder item: #'Community')
-			order: 4; 			 
+			order: 3.8; 			 
 			label: 'Community';
 			icon: PHCIconProvider pharoIcon.
-			
-	(aBuilder item: #'Pharo Homepage')
-			order: 0.002; 
-			parent: #'Community';
-			label: 'Pharo Homepage';
-			icon: PHCIconProvider pharoIcon;
-			action: [ WebBrowser openOn: 'http://www.pharo.org' ].
-	aBuilder withSeparatorAfter.		
+	
+	self pharoPagesOn: aBuilder.	
 	
 	(aBuilder item: #'Discord')
-			order: 0.002; 
+			order: 2; 
 			parent: #'Community';
 			label: 'Discord';
 			icon: PHCIconProvider discordIcon;
 			action: [ WebBrowser openOn: 'https://discordapp.com/channels/@me' ].
  
 	
-	(aBuilder item: #'Mailinglists')
-			order: 0.002; 
+	self mailingListsOn: aBuilder.
+		
+	(aBuilder item: #'SmalltalkHub')
+			order: 4; 
 			parent: #'Community';
-			label: 'Mailinglists';
-			icon: PHCIconProvider mailIcon.
-			
-	(aBuilder item: #'Pharo-dev')
-			order: 0.002; 
-			parent: #'Mailinglists';
-			label: 'Pharo-dev';
-			icon: PHCIconProvider mailIcon;
-			action: [ WebBrowser openOn: 'http://lists.pharo.org/mailman/listinfo/pharo-dev_lists.pharo.org' ].
-	(aBuilder item: #'Pharo-users')
-			order: 0.002; 
-			parent: #'Mailinglists';
-			label: 'Pharo-users';
-			icon: PHCIconProvider mailIcon;
-			action: [ WebBrowser openOn: 'http://lists.pharo.org/mailman/listinfo/pharo-users_lists.pharo.org' ].
-	aBuilder withSeparatorAfter.	
-   (aBuilder item: #'VM-dev')
-			order: 0.002; 
-			parent: #'Mailinglists';
-			label: 'VM-dev';
-			icon: PHCIconProvider mailIcon;
-			action: [ WebBrowser openOn: 'http://lists.squeakfoundation.org/mailman/listinfo/vm-dev' ].					
+			label: 'SmalltalkHub';
+			icon: PHCIconProvider smalltalkHubIcon;
+			action: [ WebBrowser openOn: 'http://www.smalltalkhub.com' ].			
