@@ -158,8 +158,8 @@ ConfigurationOfCommunity >> dev: spec [
 		spec
 			baseline: 'Tealight' with: [ 
 				spec 
-					className: 'BaselineOfTealight';
-					repository: 'github://astares/Tealight:master/repository' ]].
+					className: 'BaselineOfCommunity';
+					repository: 'github://astares/Pharo-Community:master/repository' ]].
 ]
 
 { #category : #'symbolic versions' }
@@ -198,7 +198,7 @@ ConfigurationOfCommunity >> v0_0_1: spec [
 	spec for: #'common' do: [ 
 		spec blessing: #'stable'.
 		spec
-			baseline: 'Tealight' with: [ 
+			baseline: 'Community' with: [ 
 				spec 
 					className: 'BaselineOfCommunity';
 					repository: 'github://astares/Pharo-Community:0.0.1/repository' ]]
