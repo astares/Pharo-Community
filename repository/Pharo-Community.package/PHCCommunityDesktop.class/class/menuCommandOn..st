@@ -23,4 +23,11 @@ menuCommandOn: aBuilder
 			parent: #'Community';
 			label: 'SmalltalkHub';
 			icon: PHCIconProvider smalltalkHubIcon;
-			action: [ WebBrowser openOn: 'http://www.smalltalkhub.com' ].			
+			action: [ WebBrowser openOn: 'http://www.smalltalkhub.com' ].		
+					
+	(aBuilder item: #'GitHub')
+			order: 5; 
+			parent: #'Community';
+			label: 'GitHub';
+			icon: PHCIconProvider githubIcon;
+			action: [ WebBrowser openOn: 'https://github.com/pharo-project/' ].								

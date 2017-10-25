@@ -19,6 +19,15 @@ mailingListsOn: aBuilder
 			label: 'Pharo-users';
 			icon: PHCIconProvider mailIcon;
 			action: [ WebBrowser openOn: 'http://lists.pharo.org/mailman/listinfo/pharo-users_lists.pharo.org' ].
+	aBuilder withSeparatorAfter.
+		
+	(aBuilder item: #'pharo-bugtracker')
+			order: 0.002; 
+			parent: #'Mailinglists';
+			label: 'pharo-bugtracker';
+			icon: PHCIconProvider mailIcon;
+			action: [ WebBrowser openOn: 'https://lists.gforge.inria.fr/pipermail/pharo-bugtracker' ].						
+		
 	aBuilder withSeparatorAfter.	
    (aBuilder item: #'VM-dev')
 			order: 0.002; 
