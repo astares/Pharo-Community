@@ -57,7 +57,7 @@ ConfigurationOfCommunity class >> catalogKeyClassesAndExample [
 { #category : #catalog }
 ConfigurationOfCommunity class >> catalogKeywords [
 	"Returns an array of symbols"
-	^ #(pharo community) 
+	^ #(pharo community)
 ]
 
 { #category : #private }
@@ -156,10 +156,10 @@ ConfigurationOfCommunity >> dev: spec [
 	spec for: #'common' do: [ 
 		spec blessing: #'development'.
 		spec
-			baseline: 'Tealight' with: [ 
+			baseline: 'Community' with: [ 
 				spec 
 					className: 'BaselineOfCommunity';
-					repository: 'github://astares/Pharo-Community:master/repository' ]].
+					repository: 'github://astares/Pharo-Community:master/src' ]].
 ]
 
 { #category : #'symbolic versions' }
@@ -167,7 +167,6 @@ ConfigurationOfCommunity >> development: spec [
 	<symbolicVersion: #'development'>
 
 	spec for: #'common' version: 'dev'.
-
 ]
 
 { #category : #accessing }
@@ -188,7 +187,8 @@ ConfigurationOfCommunity >> stable: spec [
 
 	spec for: #'common' version: '0.0.1'.
 	spec for: #'pharo5.x' version: '0.0.1'.
-	spec for: #'pharo6.x' version: '0.0.1'.	
+	spec for: #'pharo6.x' version: '0.0.1'. "still with webbrowser dependency"
+	spec for: #'pharo6.x' version: '0.0.2'. "no webbrowser dependency as this is included in Pharo7"
 ]
 
 { #category : #versions }
@@ -202,4 +202,17 @@ ConfigurationOfCommunity >> v0_0_1: spec [
 				spec 
 					className: 'BaselineOfCommunity';
 					repository: 'github://astares/Pharo-Community:0.0.1/repository' ]]
+]
+
+{ #category : #versions }
+ConfigurationOfCommunity >> v0_0_2: spec [
+	<version: '0.0.2'>
+
+	spec for: #'common' do: [ 
+		spec blessing: #'stable'.
+		spec
+			baseline: 'Community' with: [ 
+				spec 
+					className: 'BaselineOfCommunity';
+					repository: 'github://astares/Pharo-Community:0.0.2/src' ]]
 ]
