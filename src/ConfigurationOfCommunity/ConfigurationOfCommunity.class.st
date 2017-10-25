@@ -188,7 +188,7 @@ ConfigurationOfCommunity >> stable: spec [
 	spec for: #'common' version: '0.0.1'.
 	spec for: #'pharo5.x' version: '0.0.1'.
 	spec for: #'pharo6.x' version: '0.0.1'. "still with webbrowser dependency"
-	spec for: #'pharo6.x' version: '0.0.2'. "no webbrowser dependency as this is included in Pharo7"
+	spec for: #'pharo7.x' version: '0.0.2'. "no webbrowser dependency as this is included in Pharo7"
 ]
 
 { #category : #versions }
