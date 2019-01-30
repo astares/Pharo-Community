@@ -51,10 +51,11 @@ PHCCommunityDesktop class >> mailingListsOn: aBuilder [
 PHCCommunityDesktop class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: #'Community')
-			order: 3.8; 			 
+			parent: #'Help';
+			order: 3.3; 			 
 			label: 'Community';
-			icon: PHCIconProvider pharoIcon.
-	
+			icon: PHCIconProvider pharoIcon;
+			withSeparatorAfter.
 	self pharoPagesOn: aBuilder.	
 	
 	(aBuilder item: #'Discord')
