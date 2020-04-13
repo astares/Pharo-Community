@@ -7,7 +7,7 @@ Class {
 	#classVars : [
 		'IconCache'
 	],
-	#category : 'Pharo-Community-Utilities'
+	#category : #'Pharo-Community-Utilities'
 }
 
 { #category : #icons }
@@ -116,7 +116,7 @@ PHCIconProvider class >> iconNamed: aSymbol [
 		at: aSymbol
 		ifAbsentPut: [ 
 			Form
-				fromBinaryStream: (Base64MimeConverter mimeDecodeToBytes: (self perform: selector) readStream) ]
+				fromBinaryStream: (self perform: selector) base64Decoded readStream ]
 ]
 
 { #category : #icons }

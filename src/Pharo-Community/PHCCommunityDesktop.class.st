@@ -4,7 +4,7 @@ A community desktop
 Class {
 	#name : #PHCCommunityDesktop,
 	#superclass : #Object,
-	#category : 'Pharo-Community-Pages'
+	#category : #'Pharo-Community-Pages'
 }
 
 { #category : #private }
@@ -29,11 +29,12 @@ PHCCommunityDesktop class >> mailingListsOn: aBuilder [
 			icon: PHCIconProvider mailIcon;
 			action: [ WebBrowser openOn: 'http://lists.pharo.org/mailman/listinfo/pharo-users_lists.pharo.org' ].
 	aBuilder withSeparatorAfter.
-		
+	
+	
 	(aBuilder item: #'pharo-bugtracker')
 			order: 0.002; 
 			parent: #'Mailinglists';
-			label: 'pharo-bugtracker';
+			label: 'Pharo-Old bugtracker';
 			icon: PHCIconProvider mailIcon;
 			action: [ WebBrowser openOn: 'https://lists.gforge.inria.fr/pipermail/pharo-bugtracker' ].						
 		
@@ -51,10 +52,11 @@ PHCCommunityDesktop class >> mailingListsOn: aBuilder [
 PHCCommunityDesktop class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: #'Community')
-			order: 3.8; 			 
+			parent: #'Help';
+			order: 3.3; 			 
 			label: 'Community';
-			icon: PHCIconProvider pharoIcon.
-	
+			icon: PHCIconProvider pharoIcon;
+			withSeparatorAfter.
 	self pharoPagesOn: aBuilder.	
 	
 	(aBuilder item: #'Discord')
@@ -79,12 +81,19 @@ PHCCommunityDesktop class >> menuCommandOn: aBuilder [
 			parent: #'Community';
 			label: 'GitHub';
 			icon: PHCIconProvider githubIcon;
-			action: [ WebBrowser openOn: 'https://github.com/pharo-project/' ].								
+			action: [ WebBrowser openOn: 'https://github.com/pharo-project/' ].	
+				
+	(aBuilder item: #'Pharo-Issue tracker')
+			order: 6; 
+			parent: #'Community';
+			label: 'GitHub Issue tracker';
+			icon: PHCIconProvider githubIcon;
+			action: [ WebBrowser openOn: 'https://github.com/pharo-project/pharo/issues' ].						
+										
 ]
 
 { #category : #private }
 PHCCommunityDesktop class >> pharoPagesOn: aBuilder [
-
 
 	(aBuilder item: #'Pharo pages')
 			order: 1;
@@ -108,18 +117,13 @@ PHCCommunityDesktop class >> pharoPagesOn: aBuilder [
 			icon: PHCIconProvider pharoDocumentIcon;
 			action: [ WebBrowser openOn: 'http://books.pharo.org' ].		
 	aBuilder withSeparatorAfter.
+ 
 	(aBuilder item: #'Pharo CI')
 			order: 1; 
 			parent: #'Pharo pages';
 			label: 'Pharo CI Server';
 			icon: PHCIconProvider pharoDocumentIcon;
-			action: [ WebBrowser openOn: 'http://ci.pharo.org' ].
-	(aBuilder item: #'Pharo CI (Pharo 7)')
-			order: 1; 
-			parent: #'Pharo pages';
-			label: 'Pharo CI Server (Pharo 7)';
-			icon: PHCIconProvider pharoDocumentIcon;
-			action: [ WebBrowser openOn: 'https://ci.inria.fr/pharo-ci-jenkins2/job/Test%20pending%20pull%20request%20and%20branch%20Pipeline/job/development/' ].		
+			action: [ WebBrowser openOn: 'https://ci.inria.fr/pharo-ci-jenkins2/job/Test%20pending%20pull%20request%20and%20branch%20Pipeline/' ].		
 	aBuilder withSeparatorAfter.
 		
 	(aBuilder item: #'Pharo Association')

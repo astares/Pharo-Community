@@ -1,1 +1,1 @@
-Package { #name : #Pharo-Community }
+Package { #name : #'Pharo-Community' }
