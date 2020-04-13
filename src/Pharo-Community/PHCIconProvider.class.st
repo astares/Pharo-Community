@@ -7,7 +7,7 @@ Class {
 	#classVars : [
 		'IconCache'
 	],
-	#category : 'Pharo-Community-Utilities'
+	#category : #'Pharo-Community-Utilities'
 }
 
 { #category : #icons }
@@ -153,26 +153,6 @@ uDNwc3MTb8C/f/8Y/vz5w7BjxlSGf8cPMbjPW8bAyclJmgv+///PMDk2ieHXuUsMYVvXMEjL
 yTEwMTExMDIyEu+FdctWMTCwMDP4BfkzsLCwkB4GE2YsZfjz4ztDXlYcAxsbG+kGHDt9jmHb
 tdcMQUbyDEa6GqQZ8OXLV4bE2XsY4kykGXxsjMF+J8mAHz9+MLCysjIwMzPTMSERpRsKYAYA
 AFC9oxEPJkNHAAAAAElFTkSuQmCC'
-]
-
-{ #category : #icons }
-PHCIconProvider class >> pharoIcon [
-	<script: 'self pharoIcon inspect'>
-
-	^self iconNamed: #pharoIcon
-]
-
-{ #category : #'private - icons' }
-PHCIconProvider class >> pharoIconContents [
-
-	^'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABXUlEQVR4Xp3R3StDcRwG8P0D
-bo1cWWloTd4uxAVp3OBCXi6sKGIxF1Jb0cYpK9sau7BZM7GZMdtqTHZoWjtG2LudFWFqebni
-X3i4lZvz89w/n56+Xx6X6PcjkOtMmLP6wftPnFYr8OzAg1cLJvVChkSTebhmlchMDyI0LsWW
-O0wGeOg4LLVVcNQJ4aitgNkW4A4wiScsUhYs19f8IEJoykuxpNDi9CLLDaGjOchau0FVCrAg
-roaiuAgzze0IMlnuK3yhDGQtHZgQCDDSNQx3ME52A43Jj/7OIVDGA8TYAvkbqY0zBCIsCu9f
-cJ3EoFw7Jkfoq3uMquxoaBtDn9xIBqzuRSEe0ELUo4Z03o7LVJ4MEE250avywnN+Rz49nMjD
-4Ln9VZw0M6BvHskxnTeGJsM1yvQsdkIsd2DlKI1GWw585wf426+QrCe4l9W+NPi+T5TsvkGy
-mYbxMPmn/A3l8MkXvgsaCgAAAABJRU5ErkJggg=='
 ]
 
 { #category : #'initialize - release' }
