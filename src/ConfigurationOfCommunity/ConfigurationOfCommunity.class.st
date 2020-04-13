@@ -10,7 +10,7 @@ Class {
 	#classVars : [
 		'LastVersionLoad'
 	],
-	#category : 'ConfigurationOfCommunity'
+	#category : #ConfigurationOfCommunity
 }
 
 { #category : #'development support' }
@@ -182,6 +182,19 @@ ConfigurationOfCommunity >> pharo7: spec [
 					repository: 'github://astares/Pharo-Community:pharo7/src' ]]
 ]
 
+{ #category : #versions }
+ConfigurationOfCommunity >> pharo8: spec [
+	<version: '8.0'>
+
+	spec for: #'common' do: [ 
+		spec blessing: #'stable'.
+		spec
+			baseline: 'Community' with: [ 
+				spec 
+					className: 'BaselineOfCommunity';
+					repository: 'github://astares/Pharo-Community:pharo8/src' ]]
+]
+
 { #category : #accessing }
 ConfigurationOfCommunity >> project [
     ^ project
@@ -200,7 +213,8 @@ ConfigurationOfCommunity >> stable: spec [
 
 	spec for: #'pharo5.x' version: '0.0.1'.
 	spec for: #'pharo6.x' version: '0.0.1'. "still with webbrowser dependency"
-	spec for: #'common' version: '7.0'. "no webbrowser dependency as this is included in Pharo7"
+	spec for: #'pharo7.x' version: '7.0'. "no webbrowser dependency as this is included in Pharo7"
+   spec for: #'common' version: '8.0'. "different file browsing, ..."
 ]
 
 { #category : #versions }
