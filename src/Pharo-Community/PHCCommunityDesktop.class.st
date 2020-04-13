@@ -29,11 +29,12 @@ PHCCommunityDesktop class >> mailingListsOn: aBuilder [
 			icon: PHCIconProvider mailIcon;
 			action: [ WebBrowser openOn: 'http://lists.pharo.org/mailman/listinfo/pharo-users_lists.pharo.org' ].
 	aBuilder withSeparatorAfter.
-		
+	
+	
 	(aBuilder item: #'pharo-bugtracker')
 			order: 0.002; 
 			parent: #'Mailinglists';
-			label: 'pharo-bugtracker';
+			label: 'Pharo-Old bugtracker';
 			icon: PHCIconProvider mailIcon;
 			action: [ WebBrowser openOn: 'https://lists.gforge.inria.fr/pipermail/pharo-bugtracker' ].						
 		
@@ -80,5 +81,63 @@ PHCCommunityDesktop class >> menuCommandOn: aBuilder [
 			parent: #'Community';
 			label: 'GitHub';
 			icon: PHCIconProvider githubIcon;
-			action: [ WebBrowser openOn: 'https://github.com/pharo-project/' ].								
+			action: [ WebBrowser openOn: 'https://github.com/pharo-project/' ].	
+				
+	(aBuilder item: #'Pharo-Issue tracker')
+			order: 6; 
+			parent: #'Community';
+			label: 'GitHub Issue tracker';
+			icon: PHCIconProvider githubIcon;
+			action: [ WebBrowser openOn: 'https://github.com/pharo-project/pharo/issues' ].						
+										
+]
+
+{ #category : #private }
+PHCCommunityDesktop class >> pharoPagesOn: aBuilder [
+
+	(aBuilder item: #'Pharo pages')
+			order: 1;
+			parent: 'Community'; 			 
+			label: 'Pharo';
+			icon: PHCIconProvider pharoIcon.
+	aBuilder withSeparatorAfter.			
+			
+	(aBuilder item: #'Pharo Homepage')
+			order: 1; 
+			parent: #'Pharo pages';
+			label: 'Pharo Homepage';
+			icon: PHCIconProvider pharoIcon;
+			action: [ WebBrowser openOn: 'http://www.pharo.org' ].
+	aBuilder withSeparatorAfter.	
+		
+	(aBuilder item: #'Pharo Books')
+			order: 1; 
+			parent: #'Pharo pages';
+			label: 'Pharo Books';
+			icon: PHCIconProvider pharoDocumentIcon;
+			action: [ WebBrowser openOn: 'http://books.pharo.org' ].		
+	aBuilder withSeparatorAfter.
+ 
+	(aBuilder item: #'Pharo CI')
+			order: 1; 
+			parent: #'Pharo pages';
+			label: 'Pharo CI Server';
+			icon: PHCIconProvider pharoDocumentIcon;
+			action: [ WebBrowser openOn: 'https://ci.inria.fr/pharo-ci-jenkins2/job/Test%20pending%20pull%20request%20and%20branch%20Pipeline/' ].		
+	aBuilder withSeparatorAfter.
+		
+	(aBuilder item: #'Pharo Association')
+			order: 1; 
+			parent: #'Pharo pages';
+			label: 'Pharo Association';
+			icon: PHCIconProvider pharoDocumentIcon;
+			action: [ WebBrowser openOn: 'https://association.pharo.org' ].		
+					
+	(aBuilder item: #'Pharo Consortium')
+			order: 1; 
+			parent: #'Pharo pages';
+			label: 'Pharo Consortium';
+			icon: PHCIconProvider pharoDocumentIcon;
+			action: [ WebBrowser openOn: 'http://consortium.pharo.org' ].					
+			
 ]
